@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<div class="row">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="username" type="email" class="validate" placeholder="Username.." [(ngModel)]="username">
+        </div>
+      <div class="row">
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate" placeholder="Password.." [(ngModel)]="password">
+
+      </div>
+    </div>
+    </div>
+    <p *ngIf="auth">Incorrect Username or Password!</p>
+    <a class="waves-effect waves-light btn" (click)="loginHandler()">Login</a>
+</div>

@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="input-field col s6">
+    <input id="title" type="text" class="validate" [(ngModel)]="blog.title">
+    <label for="title">Title</label>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <textarea id="textarea1" class="materialize-textarea" [(ngModel)]="blog.content"></textarea>
+      <label for="textarea1">Content</label>
+    </div>
+  </div>
+  <label for="sl">Category</label>
+  <select class="browser-default" [(ngModel)]="blog.category" id="sl">
+    <option value="" disabled selected>Others</option>
+    <option value="movies">Movies</option>
+    <option value="Sports">Sports</option>
+  </select>
+</div>
+<a class="waves-effect waves-light btn" (click)="submissionHandler()">Add Blog</a>

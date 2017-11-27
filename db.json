@@ -1,0 +1,86 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "name": "Parv",
+      "username": "parvsharma",
+      "password": "password1",
+      "blogs": [
+        1,
+        8,
+        6,
+        9,
+        10,
+        11,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Ashish",
+      "username": "ashishparashar",
+      "password": "password2",
+      "blogs": [
+        3,
+        4,
+        2,
+        6,
+        8,
+        9,
+        10,
+        12
+      ]
+    }
+  ],
+  "Blogs": [
+    {
+      "title": "The Machinist",
+      "author": 1,
+      "category": "movies",
+      "id": 2,
+      "content": "Very well made thriller starring christian bale with excellent performances, cult classic. 4.5 stars, please watch for sure"
+    },
+    {
+      "title": "leo messi",
+      "author": 1,
+      "category": "Sports",
+      "id": 6,
+      "content": "the greatest of all time, carries both his teams on shoulders, fantastic in all the roles of striker, playmaker, dribbler."
+    },
+    {
+      "id": 8,
+      "title": "primal fear",
+      "author": 1,
+      "content": "very fine thriller with great performances, 4 stars.",
+      "category": "movies"
+    },
+    {
+      "id": 9,
+      "title": "iniesta",
+      "author": 1,
+      "content": "don iniesta, best midfielder ever",
+      "category": "Sports"
+    },
+    {
+      "id": 10,
+      "title": "fc barcelona",
+      "author": 1,
+      "content": "more than a club, la masia us the best youth academy, where legends are born.",
+      "category": "Sports"
+    },
+    {
+      "id": 11,
+      "title": "arjun reddy",
+      "author": 1,
+      "content": "i dont know telugu but still watched this movie with subtitles, was worth it.. 4 stars",
+      "category": "movies"
+    },
+    {
+      "id": 12,
+      "title": "se7en",
+      "author": 1,
+      "content": "Great movie directed by david fincher.. must watch for fans of thriller genre, 4 stars",
+      "category": "movies"
+    }
+  ]
+}

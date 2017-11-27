@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+
+
+<nav>
+  <div class="nav-wrapper">
+    <div class="col s12">
+      <a class="waves-effect waves-light btn" (click)="getMovies()">Movies</a>
+      <a class="waves-effect waves-light btn" (click)="getSports()">Sports</a>
+      <a class="waves-effect waves-light btn" (click)="getOthers()">Others</a>
+    </div>
+  </div>
+</nav>
+<div class="row" *ngFor="let blog of blogs">
+  <div class="col s12 m6">
+    <div class="card">
+      <div class="card-image">
+        <img src="../../assets/{{blog.category}}.jpg">
+        <span class="card-title">{{blog.title}}</span>
+
+      </div>
+      <div class="card-content">
+        <p>{{blog.content}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+

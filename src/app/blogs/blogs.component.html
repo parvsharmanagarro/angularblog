@@ -1,0 +1,17 @@
+
+<h2>Popular Blogs</h2>
+<div class="row" *ngFor="let blog of blogs" >
+  <div class="col s12 m6">
+    <div class="card">
+      <div class="card-image">
+        <img src="../../assets/{{blog.category}}.jpg">
+        <span class="card-title">{{blog.title}}</span>
+      </div>
+      <a class="btn-floating right waves-effect waves-light yellow" (click)="favHandler(blog)" ><i class="material-icons">favorite</i></a>
+      <div class="card-content">
+        <p>{{blog.content}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

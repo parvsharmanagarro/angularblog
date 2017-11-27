@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="input-field col s6">
+    <input id="title" type="text" class="validate" [(ngModel)]="ublog.title" placeholder="{{cblog.title}}">
+
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <textarea id="textarea1" class="materialize-textarea" [(ngModel)]="ublog.content" placeholder="{{cblog.content}}"></textarea>
+    </div>
+  </div>
+  <label for="sl">Category</label>
+  <select class="browser-default" [(ngModel)]="ublog.category" id="sl" >
+    <option value="" disabled selected>{{cblog.category}}</option>
+    <option value="">Others</option>
+    <option value="movies">Movies</option>
+    <option value="Sports">Sports</option>
+  </select>
+</div>
+<a class="waves-effect waves-light btn" (click)="updateBlog()">Save Changes</a>

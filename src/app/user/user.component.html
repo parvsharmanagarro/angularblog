@@ -1,0 +1,40 @@
+<nav>
+  <div class="nav-wrapper">
+    <a [routerLink]="['/home']" class="brand-logo">Parv's Blog</a>
+
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><font color="#8a2be2"> Hi {{user.name}}, Welcome to the blog..</font></li>
+
+      <li><input id="search" type="search" [(ngModel)]="searchstr" placeholder="To search,click the icon.." required></li>
+      <li><a class="btn-floating waves-effect waves-light grey " (click)="onSearch()"  ngDefaultControl><i class="material-icons">search</i></a></li>
+      <li><a [routerLink]="['/category']">Categories</a></li>
+      <li><a [routerLink]="['/fav']">Favorites</a></li>
+      <li><a (click)="showBlogs()">My Blogs</a></li>
+      <li><a [routerLink]="['/add']">Post New+</a></li>
+      <li><a (click)="logoutHandler()">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<app-searched [blogs]="searchblogs" *ngIf="searched"></app-searched>
+<app-blogs *ngIf="showAll"></app-blogs>
+<div *ngIf="showblogs">
+  <h2>Your Blogs:</h2>
+<div class="row" *ngFor="let blog of blogs" >
+  <div class="col s12 m6">
+    <div class="card">
+      <div class="card-image">
+        <img src="../../assets/{{blog.category}}.jpg">
+        <span class="card-title">{{blog.title}}</span>
+        <a class="btn-floating red right waves-effect waves-light " (click)="deleteBlog(blog.id)"><i class="material-icons">delete</i></a>
+        <a class="btn-floating right waves-effect waves-light green" (click)="updateBlog(blog)"><i class="material-icons">edit</i></a>
+
+      </div>
+      <div class="card-content">
+        <p>{{blog.content}}</p>
+        <app-form *ngIf="showform" [blog]="blog" [showform]="showform"></app-form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+

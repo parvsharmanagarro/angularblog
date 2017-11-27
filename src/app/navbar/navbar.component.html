@@ -1,0 +1,18 @@
+
+<nav>
+  <div class="nav-wrapper">
+    <a [routerLink]="['/home']" class="brand-logo" >Parv's Blog</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+      <li><input id="search" type="search" [(ngModel)]="searchstr" placeholder="To search,click the icon.."  required *ngIf="homeoruser"></li>
+      <li><a class="btn-floating waves-effect waves-light grey " (click)="onSearch()"  ngDefaultControl *ngIf="homeoruser"><i class="material-icons">search</i></a></li>
+      <li><a [routerLink]="['/category']">Categories</a></li>
+
+
+      <li><a (click)="logHandler()">{{log}}</a></li>
+
+      <li *ngIf="signed"><a [routerLink]="['/user']">Go back to your profile </a></li>
+
+    </ul>
+  </div>
+</nav>

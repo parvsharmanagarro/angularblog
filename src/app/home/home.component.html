@@ -1,0 +1,4 @@
+<app-navbar (onsearch)="searchHandler($event)"></app-navbar>
+<app-searched *ngIf="search" [blogs]="blogs"></app-searched>
+<app-blogs></app-blogs>
+
