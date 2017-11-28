@@ -31,6 +31,7 @@ const routes: Routes = [
   {path:'add', component:AddComponent},
   {path:'fav',component:FavouriteComponent},
   {path:'category', component:CategoryComponent}
+
 ];
 @NgModule({
   declarations: [
